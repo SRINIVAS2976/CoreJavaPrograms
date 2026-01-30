@@ -1,0 +1,47 @@
+package encapsulationConcept;
+class Book{
+	private String title;
+	private String author;
+	private int price;
+	private int percentage;
+	private int originalprice;
+	void settitle(String title){
+		this.title=title;
+	}
+	void setauthor(String author){
+		this.author=author;
+	}
+	void setoriginalprice(int originalprice){
+		this.originalprice=originalprice;
+	}
+	void  applyDiscount(int percentage){
+		price=originalprice*percentage/100;
+		price=originalprice-price;
+		this.price=price;
+		
+	}
+	String gettitle(){
+		return title;
+	}
+	String getauthor(){
+		return author;
+	}
+	int getprice(){
+		return price;
+	}
+}
+
+public class EncapsulationProblem{
+	
+
+	public static void main(String[] args) {
+		Book b=new Book();
+		b.settitle("the mysterious crime ");
+		b.setauthor("srini");
+		b.setoriginalprice(20000);
+		b.applyDiscount(10);
+		System.out.println(b.gettitle()+"writte by author"+b.getauthor()+"and its price after applying discount"+b.getprice());
+
+	}
+
+}

@@ -1,0 +1,48 @@
+package constructorChaining;
+class parent1{
+	int a;
+	int b;
+      parent1() {
+    	  //super()// constructor will call by jvm and it automatcially goes parent class of every class is "object"
+    	  this(455,750);// to call same class parameterized constructor
+		a=300;
+		b=5000;
+	}
+	 parent1(int a, int b) {// it wil comes here after suoer(100,200)called in child class .
+		// this();
+		 super();
+		this.a = a;
+		this.b = b;
+	}
+	
+}
+class child1 extends parent1{
+	int x;
+	int y;
+	 child1() {
+		 super();// here it automatically creates by jvm and it goes to parent class 0 parameter constructor
+		// this(20,355);// to call same class parameterized constructor we use this().first executes that and come back here .
+		x=500;
+		y=750;
+	}
+	 child1(int x, int y) {
+		// super()//again here comes after the object in parameter and jvm calls super() in default and goes to parent class
+		// super(100,200);// if u want to go to parameterized constructor in parent class progammer must define like this .jvm will not creatte "super()"empty constructor
+		 this();//to call from here 0 parameterized constructor in same class first it completes and then bottom this.x,y will execute.
+		this.x = x;
+		this.y = y;
+	 }
+	void disp(){
+		 System.out.println(x+y+a+b);
+	 }
+}
+
+public class ConstructorChaining {
+
+	public static void main(String[] args) {
+		//child1 c=new child1();// when calling 0 parameter constructor it goes to child class and look for 0 paramter constructor
+		child1 c=new child1(100,200);// it goes to parameterized constructor in child class .
+		c.disp();
+	}
+
+}

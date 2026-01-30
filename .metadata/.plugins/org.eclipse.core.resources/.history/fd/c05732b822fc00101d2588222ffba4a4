@@ -1,0 +1,111 @@
+package com.example.Aggregation$Composition;
+class Bike{
+	private String brand;
+	private float mileage;
+	public Bike(String brand, float mileage) {
+		super();
+		this.brand = brand;
+		this.mileage = mileage;
+	}
+	public String getBrand() {
+		return brand;
+	}
+	public float getMileage() {
+		return mileage;
+	}
+	
+}
+class Book{
+	private String bookname;
+	private String author;
+	public Book(String bookname, String author) {
+		super();
+		this.bookname = bookname;
+		this.author = author;
+	}
+	public String getbookName() {
+		return bookname;
+	}
+	public String getAuthor() {
+		return author;
+	}	
+}
+class Heart{
+	private float weight;
+	private int bpm;
+	public Heart(float weight, int bpm) {
+		super();
+		this.weight = weight;
+		this.bpm = bpm;
+	}
+	public float getWeight() {
+		return weight;
+	}
+	public int getBpm() {
+		return bpm;
+	}
+	
+}
+class Brain{
+	private float weight;
+	private String colour;
+	public Brain(float weight, String colour) {
+		super();
+		this.weight = weight;
+		this.colour = colour;
+	}
+	public float getWeight() {
+		return weight;
+	}
+	public String getColour() {
+		return colour;
+	}
+}
+class Student{
+	// we r creating tightly bound object inside student as a real world logic ,heart and brain inside student thats why it is known as  composition.to // we r creating tightly bound object inside student as a real world logic ,heart and brain inside student only so its composition to main object
+	Heart H=new Heart(2.5f,75);       // we need to give values as we call parameterized constructor so we must give values for that constructor before object creation
+	Brain b=new Brain(1.4f,"grey matter");
+	 // now write functions for aggregated (loosely bonded objects for bike and books)
+	void hasA(Bike b){                       // this 'b'vriable name for inside student for doing actions 
+		System.out.println(b.getBrand());
+		System.out.println(b.getMileage());
+	}
+	void hasA(Book b1){                            // this b1 also same like inside student class performing action of book class from outside givoing varibale b1.
+		System.out.println(b1.getAuthor());
+		System.out.println(b1.getbookName());
+	}
+}
+
+public class AggregationAndCompositionExample {
+
+	public static void main(String[] args) {
+		Student s=new Student();   // we creating object for main class
+		// creating objects for aggregated classes
+		
+		Bike b=new Bike("splendor",22.5f);   
+		Book bo=new Book("the perfect crime","srini");
+		// printing the oject created inside student class that get statements for heart and brain
+		System.out.println(s.H.getWeight());
+		System.out.println(s.H.getBpm());
+		System.out.println(s.b.getWeight());
+		System.out.println(s.b.getColour());
+		// here we calling hasA method in main class and passing parameter of refernce which we created 'b'in main function bike object we passing as a parameter ,because bike class is in different 
+		s.hasA(b); // student using bike 
+		// here we calling hasA method for book and passing parameter as reference of the object book because this 'bo' calls a that main class bo to here metho bo.
+		s.hasA(bo); // student reading book thats simple real world 
+		
+		// java should stole the brain and heart actualy in real world stealing brain and heart person will die same  like java should do here for that below statement
+		s=null; // main class make it as null
+		s.hasA(b);
+		s.hasA(bo);
+		
+		//now even i try to access the brain and heart inside student its gone ,it will show error in output
+		System.out.println(s.H.getWeight());
+		System.out.println(s.H.getBpm());
+		System.out.println(s.b.getWeight());         // error shows this
+		System.out.println(s.b.getColour());
+		
+		
+	}
+
+}

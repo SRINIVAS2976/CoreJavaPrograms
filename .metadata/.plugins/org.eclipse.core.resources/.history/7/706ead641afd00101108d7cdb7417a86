@@ -1,0 +1,20 @@
+package com.example.abstraction;
+abstract class parent{
+	void disp() {
+		System.out.println("iam a parent");
+	}
+}
+ class child extends parent{
+	 void disp() {
+		 System.out.println("iam a child of u");
+	 }
+ }
+
+public class AbstractionExample {
+
+	public static void main(String[] args) {
+		parent ref=new child();
+		ref.disp();
+	}
+
+}

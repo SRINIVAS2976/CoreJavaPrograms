@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+        <listEntry value="/inheritanceExampleProblem/src/inheritanceExampleProblem/InheritanceExampleOverriddenMethods.java"/>
+    </listAttribute>
+    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+        <listEntry value="1"/>
+    </listAttribute>
+    <booleanAttribute key="org.eclipse.jdt.launching.ATTR_EXCLUDE_TEST_CODE" value="true"/>
+    <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="inheritanceExampleProblem.InheritanceExampleOverriddenMethods"/>
+    <stringAttribute key="org.eclipse.jdt.launching.MODULE_NAME" value="inheritanceExampleProblem"/>
+    <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="inheritanceExampleProblem"/>
+</launchConfiguration>

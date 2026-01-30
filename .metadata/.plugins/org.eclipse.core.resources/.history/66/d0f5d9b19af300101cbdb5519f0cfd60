@@ -1,0 +1,18 @@
+package stringReverse;
+
+public class StringReversal {
+
+	public static void main(String[] args) {
+		String s="java tap academy";
+		int a=s.length();
+		for(int i=a-1;i>=0 ;i--) {
+		     char n1=s.charAt(i);
+		            String n2=s+n1;
+			// by using concat method
+			System.out.print(n2);
+				
+		}
+		
+	}
+
+}
