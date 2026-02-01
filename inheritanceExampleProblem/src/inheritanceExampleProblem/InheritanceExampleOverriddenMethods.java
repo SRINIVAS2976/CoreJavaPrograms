@@ -41,11 +41,11 @@ class lion extends Animal{
 }
 class tiger extends Animal{
     @Override
-	tiger eat() {    
+       tiger  eat() {    
 		// here the parent class has eat() has object return type so we can give any object as return type only in this case .
-		tiger t=new tiger();
+		tiger A=new tiger();
 		System.out.println("hi"); // here overriding
-		return t;   // return the reference of object 
+		return A;   // return the reference of object 
 	}
 }
 
@@ -90,13 +90,13 @@ public class InheritanceExampleOverriddenMethods {
 		 Animal ref=new deer();     // another way of creating object to achieve polymorpsim .parent reference ,child object
 		 
 		 Animal ref1=new lion();
-		/*deer d= new deer();
+		deer d= new deer();
 		lion l=new lion();
 		tiger t=new tiger();
-		monkey m=new monkey(); */
+		monkey m =new monkey();
 		                             // for speciailized methods achieving polymorphism  it is "down casting" ,parent class into child class
 		
-	   /*  ref=d;        // assigning child reference to parent reference .
+	     /*ref=d;        // assigning child reference to parent reference .
 		((deer)(ref)).sleep();
 		ref=l;
 		
@@ -106,8 +106,8 @@ public class InheritanceExampleOverriddenMethods {
 		                              // for overriden methods we can call directly methods using ref.eat() but the efficient way is 
 		                                // for multiple overriden methods this case will be useful.in child classes instead of calling each method of each class.
                AnimalsBehaviours a=new AnimalsBehaviours();
-               a.animalkingdom(d);
-               a.animalkingdom(l);
+               a.animalkingdom(ref);
+               a.animalkingdom(ref1);
                a.animalkingdom(t);                         // we have achieved polymophsism by code flexibility as creating one class and accssing all overriden methods,code lines also reduced
                a.animalkingdom(m);
                                                      // many lines of code is reduced.
