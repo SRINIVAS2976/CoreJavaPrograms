@@ -1,4 +1,7 @@
-package com.example.abstraction;
+package com.example.abstraction;  // abstratction is only used when u have related classes , when u dont have related classes u need to use interface.
+
+
+                                 // only u need to exted same type of object ,in abstraction for example vehicle ,car ,bike ,bus etc ,samel like parent ,child etc
 
  abstract class AbstractMethodsAndConcreteMethods {    // we cannot use both final and abstract keyword for class and variables and methods ,if methods have body we can use final
 	 abstract void disp();

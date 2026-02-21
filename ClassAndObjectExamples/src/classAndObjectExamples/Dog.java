@@ -1,12 +1,18 @@
 package classAndObjectExamples;
 
-
+class increment{
+	//int price=5;
+}
 
 public class Dog {
 	String name;
 	int price;
+	//int price=5; static main method cannot access instance method . thats why error there
+	
 
 	public static void main(String[] args) {
+	
+		//System.out.println(++price); // error for increment no local varibale defined.
 		// For creating 3 dog objects .
 	 Dog d=new Dog();   
 	Dog  d1 =new Dog();

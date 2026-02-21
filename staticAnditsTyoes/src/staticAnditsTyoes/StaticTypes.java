@@ -25,13 +25,15 @@ class StaticTypesAndMethods{
 	 void fun2() {// instance method
 		 
 		 System.out.println(x*y);
-		 
+		 System.out.println(a+b);// accessing static types proofs.
 		
 	 }
 	 StaticTypesAndMethods(){     // constructor of class 
 		x=25;
 		y=20;
 		System.out.println(x+y);
+		System.out.println(a-b); //non static members can access static members but static members cannot access non static members
+		System.out.println(a/b);
 		 
 	 }
 }

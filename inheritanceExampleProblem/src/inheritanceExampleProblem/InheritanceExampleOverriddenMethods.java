@@ -3,10 +3,10 @@ class Animal{
 	static  void breathe() {                           // tis method will hide automatically when we use this same method in child class . if u want to print this method using parent class u can print but not using child class . 
 		System.out.println("animals always live due to breathing only ");
 	}
-	void eats() {
+	 void eats() {
 		System.out.println("i will eat any types of animals");
 	}
-	void hunt() {
+	 void hunt() {
 		System.out.println("i will be hunting any small animals");
 	}
 	Animal eat() {  /// object is the return type so we can return this also in overriding
