@@ -1,12 +1,13 @@
 package com.example.TreesetAndHashSet;
 import java.util.TreeSet;
+import java.util.*;
 import java.util.HashSet;
 import java.util.Iterator;
 
 public class TreeSetAndHashSet {
 
 	public static void main(String[] args) {
-		/*TreeSet T=new TreeSet();
+		TreeSet<Integer> T=new TreeSet<Integer>();
 	    T.add(20);
 	    T.remove(20);
 	    T.add(30);
@@ -21,15 +22,21 @@ public class TreeSetAndHashSet {
 	    System.out.println(T.tailSet(70));// it prints last values after 70
 	    System.out.println(T.subSet(50, 90)); // it prints middle values from 50-90
 	    System.out.println(T);
-	}*/
+	 Iterator itr=T.descendingIterator();    // for printing from backwards . descending order.
+	 while(itr.hasNext()) {
+		 System.out.println(itr.next());
+	 }
+	
 	HashSet hs=new HashSet();
 	hs.add("tap");
 	hs.add(30);
 	hs.add(30); // no duplcatres
-	Iterator itr=hs.iterator();
-	while(itr.hasNext()) {
+	//Iterator itr=hs.iterator();
+	/*
+	 while(itr.hasNext()) {
 	System.out.println(itr.next());
 	}
+	*/
 
 }
 }

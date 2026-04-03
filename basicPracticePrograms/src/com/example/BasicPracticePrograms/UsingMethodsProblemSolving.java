@@ -17,6 +17,8 @@ public class UsingMethodsProblemSolving {
 		//System.out.println(count); // printing count value o how many numbers are factors of given integer .
 		return count==2?"prime":"not prime"; // checking prime efficient way.
 	}
+	
+	
 	         // checking given value prime or not .
 	void primeNumber(int n){
 		if(n<=1) {

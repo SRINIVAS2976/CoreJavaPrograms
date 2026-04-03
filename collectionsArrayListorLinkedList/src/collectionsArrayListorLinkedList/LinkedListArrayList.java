@@ -1,5 +1,6 @@
 package collectionsArrayListorLinkedList;
 import java.util.Collection;
+import java.util.*;
 import java.util.LinkedList;
 import java.util.ArrayList;
 
@@ -25,11 +26,17 @@ public class LinkedListArrayList {
 		for(int i=0;i<L1.size() ;i++) {
 			System.out.println(L1.get(i));
 		}
-		ArrayList A2=new ArrayList(3);// constructor with this size
+		ArrayList<Integer> A2=new ArrayList<Integer>(3);// constructor with this size
 		A2.add(10);
 		A2.add(300);
 		A2.add(200);
 		A2.add(400);
+		A2.add(500);
+		
+		ListIterator itr=A2.listIterator(5);
+		while(itr.hasPrevious()) {
+			System.out.println(itr.previous());
+		}
 		LinkedList L2=new LinkedList(A2);
 		//System.out.println(L2.peek());// here we r peeking the first element just copy &paste 
 		

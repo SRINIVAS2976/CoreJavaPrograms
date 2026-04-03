@@ -19,16 +19,16 @@ class ConstructorAndDefaultConstructor{
 		c='b';
 	     s1="ramu";
 	}
-	public ConstructorAndDefaultConstructor(String s1){ //Constructor given by me for 0 parameterized constructor
+	public ConstructorAndDefaultConstructor(String s1){ 
 		// we can directly pass values here also 
-		this();
+		this();// calling 0 parameterized contructor top .this is constructor chaining the output will that 0 parameterized constructor defined values
+		
 		this.s1=s1; // it will overwritten the value ramu in top u given value .
 	}
 	
 	
 	public   ConstructorAndDefaultConstructor(int a,double d,String s1){ 
-		this(s1);// calling 0 parameterized contructor top .this is constructor chaining the output will that 0 parameterized constructor defined values
-		
+		this(s1); // calling parameterized .
 		
 		//this.a=a;
 		//this.d=d;

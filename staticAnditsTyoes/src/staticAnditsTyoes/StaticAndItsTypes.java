@@ -4,7 +4,7 @@ class Test{
 		System.out.println("hello welcome"); /// only this static block loaded after the class test object created in main function
 	}
 	static void print() {
-		execute();// cannot acces non static methods
+		//execute();// cannot acces non static methods
 	}
      void execute() {
     	 execute();// normal methods can acces static types
